@@ -4,7 +4,7 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
-    /* Smooth scrolling when navigating */
+    /* Smooth scrolling */
     scroll-behavior: smooth;
     /* The Font Family- Really important!! */
     font-family: 'Comic Sans MS', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif, sans-serif;
@@ -60,7 +60,6 @@ img {
     font-size: 2em;
     padding: 0.1em 3em;
     background-color: rgb(50, 133, 105);
-    /* Subtle hover transition for title bar */
     transition: background-color 0.3s ease;
 }
 
@@ -88,18 +87,14 @@ img {
     box-shadow: 10px 10px 10px rgba(13, 59, 21, 0.2);
     /* Smooth movement and shadow transitions */
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    /* Keeps image zoom clean inside rounded borders */
     overflow: hidden; 
     cursor: pointer;
 }
 
 /* Hover effects for the topic cards */
 .topic-card:hover {
-    /* Lifts card up slightly */
     transform: translateY(-10px); 
-    /* Enhances shadow depth */
     box-shadow: 12px 18px 20px rgba(13, 59, 21, 0.35); 
-    /* Slightly brightens background on hover */
     background-color: rgba(14, 119, 77, 0.65);
 }
 
@@ -112,14 +107,31 @@ img {
 .topic-card-text {
     font-size: 1.5em;
     margin-bottom: 0.5em;
-    /* center align text */
     text-align: center;
-    /* Transition for text color shift */
     transition: color 0.3s ease;
 }
 
 .topic-card:hover .topic-card-text {
     color: #ffffff;
+}
+
+/* Hidden card description by default */
+.topic-card-description {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    margin: 0;
+    font-size: 0.95em;
+    text-align: center;
+    color: #e0f2fe;
+    transition: max-height 0.4s ease, opacity 0.4s ease, margin-top 0.3s ease;
+}
+
+/* Description revealed when clicked */
+.topic-card.active .topic-card-description {
+    max-height: 120px;
+    opacity: 1;
+    margin-top: 0.8em;
 }
 
 /* Styling for a footer section to take a bit of space at the bottom of the page */
