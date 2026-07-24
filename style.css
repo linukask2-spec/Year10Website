@@ -4,14 +4,19 @@ html {
     margin: 0;
     padding: 0;
     height: 100%;
+    /* Smooth scrolling when navigating */
+    scroll-behavior: smooth;
     /* The Font Family- Really important!! */
     font-family: 'Comic Sans MS', 'Haettenschweiler', 'Arial Narrow Bold', sans-serif, sans-serif;
     box-sizing: border-box;
 }
 
-/* reset for images to ensure they ar 100% of the parent container width */
+/* reset for images to ensure they are 100% of the parent container width */
 img {
     width: 100%;
+    display: block;
+    /* Smooth transition for hover zoom effect */
+    transition: transform 0.4s ease;
 }
 
 /* The hero section styling- use your OWN Hero Image URL here */
@@ -26,24 +31,45 @@ img {
     color: rgb(8, 68, 58);
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 
 /* BIG text styling for the hero section text */
 .hero-text {
     font-size: 4em;
     font-weight: bold;
+    /* Entrance animation when page loads */
+    animation: floatIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Hero text slide-down keyframe animation */
+@keyframes floatIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* nice big font on a banner style background */
-.topic-title{
+.topic-title {
     color: rgb(247, 247, 247);
     font-size: 2em;
     padding: 0.1em 3em;
     background-color: rgb(50, 133, 105);
+    /* Subtle hover transition for title bar */
+    transition: background-color 0.3s ease;
+}
+
+.topic-title:hover {
+    background-color: rgb(40, 115, 90);
 }
 
 /* Three column grid with a nice big gap */
-.topic-content{
+.topic-content {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 6em;
@@ -54,29 +80,52 @@ img {
 }
 
 /* Styling for the individual topic cards rounded edges background color and a drop shadow */
-.topic-card{
-    background-color: rgba(14, 119, 77, 0.473);
+.topic-card {
+    background-color: rgba(14, 119, 77, 0.486);
     color: rgb(255, 255, 255);
     padding: 1em;
     border-radius: 0.5em;
     box-shadow: 10px 10px 10px rgba(13, 59, 21, 0.2);
+    /* Smooth movement and shadow transitions */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    /* Keeps image zoom clean inside rounded borders */
+    overflow: hidden; 
+    cursor: pointer;
+}
+
+/* Hover effects for the topic cards */
+.topic-card:hover {
+    /* Lifts card up slightly */
+    transform: translateY(-10px); 
+    /* Enhances shadow depth */
+    box-shadow: 12px 18px 20px rgba(13, 59, 21, 0.35); 
+    /* Slightly brightens background on hover */
+    background-color: rgba(14, 119, 77, 0.65);
+}
+
+/* Zoom image slightly when card is hovered */
+.topic-card:hover img {
+    transform: scale(1.06);
 }
 
 /* Styling for the topic card titles */
-.topic-card-text{
+.topic-card-text {
     font-size: 1.5em;
     margin-bottom: 0.5em;
     /* center align text */
     text-align: center;
+    /* Transition for text color shift */
+    transition: color 0.3s ease;
 }
 
+.topic-card:hover .topic-card-text {
+    color: #ffffff;
+}
 
-/* Styling for a footer section to take a bit of spcae at the bottom of the page */
-.footer{
+/* Styling for a footer section to take a bit of space at the bottom of the page */
+.footer {
     background-color: rgb(7, 6, 6);
     color: rgb(114, 111, 111);
     text-align: right;
     padding: 3em 3em;
-
-
 }
