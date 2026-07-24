@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -7,122 +9,112 @@
     <link rel="stylesheet" href="style.css">
     <title>Linuka's Image Showcase Website</title>
 </head>
-<!-- This is the main body of the website- ALL your content goes AFTER the <body> tag and before the </body> tag -->
 <body>
 
-    <!-- The Hero Section -------------------------------------------------------------------------------------- -->
     <section class="hero">
         <div class="hero-text">My Showcase Website</div>
     </section>
 
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
-    <section class="topic">
-        <!-- the topic title a big bar with text in it -->
+<section class="topic">
         <div class="topic-title">
             <h1>Image Editing</h1>
         </div>
-        <!-- now a three column grid of images -->
         <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/collision.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/collision.png" alt="Two planets colliding in space">
                 <h2 class="topic-card-text">Collision Image</h2>
+                <p class="topic-card-description">A dramatic sci-fi scene showing two giant planets crashing into each other in deep space, sending shockwaves and debris across the stars.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/alien planet.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/alien planet.png" alt="Alien Planet digital artwork">
                 <h2 class="topic-card-text">Alien Planet</h2>
+                <p class="topic-card-description">A surreal sci-fi landscape created by compositing multiple photos together onto a single canvas using blending modes and color grading.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/gimppixelart.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/gimppixelart.png" alt="GIMP Desert pixel art showcase">
                 <h2 class="topic-card-text">GIMP Desert art</h2>
+                <p class="topic-card-description">Made with GIMP, this painting shows how different and mysterious a desert looks at night.</p>
             </div>
         </div>
     </section>
-<!-- End of topic one------------------------------------------------------------------------------------------ -->
 
-<!-- Copy and paste the section from above to make your next section -->
-
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
-    <section class="topic">
-        <!-- the topic title a big bar with text in it -->
+<section class="topic">
         <div class="topic-title">
             <h1>Coding in Python</h1>
         </div>
-        <!-- now a three column grid of images -->
         <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/grok start.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/grok start.png" alt="Start of Python course">
                 <h2 class="topic-card-text">Start of course</h2>
+                <p class="topic-card-description">My first steps into Python programming on Grok, learning basic syntax, variables, and printing output.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/grok 1.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/grok 1.png" alt="Python coding exercises showcase">
                 <h2 class="topic-card-text">Some of my work</h2>
+                <p class="topic-card-description">Solving coding challenges using loops, if statements, and user input to process data.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/grok1 og.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/grok1 og.png" alt="End of Python course completion showcase">
                 <h2 class="topic-card-text">End of course</h2>
+                <p class="topic-card-description">Completing the final advanced challenges, combining functions, lists, and problem-solving skills.</p>
             </div>
         </div>
     </section>
 
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
-    <section class="topic">
-        <!-- the topic title a big bar with text in it -->
+<section class="topic">
         <div class="topic-title">
-            <h1>3D modelling</h1>
+            <h1>3D Modelling</h1>
         </div>
-        <!-- now a three column grid of images -->
         <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/start.png" alt="change this too!">
-                <h2 class="topic-card-text">The beggining</h2>
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/start.png" alt="Beginning stages of 3D modeling">
+                <h2 class="topic-card-text">The Beginning</h2>
+                <p class="topic-card-description">My initial steps learning 3D space navigation, extruding basic shapes, and manipulating vertices.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/snowman2.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/snowman2.png" alt="Completed 3D Snowman render">
                 <h2 class="topic-card-text">Finished Snowman</h2>
+                <p class="topic-card-description">A complete 3D character model rendered with custom materials, smooth modifiers, and scene lighting.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/matau.PNG" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/matau.PNG" alt="3D Hei Matau design render">
                 <h2 class="topic-card-text">Hei Matau</h2>
+                <p class="topic-card-description">A detailed 3D model inspired by the traditional Hei Matau carving, focusing on complex curves and texture mapping.</p>
             </div>
         </div>
     </section>
 
-    
-<!-- Topic one ------------------------------------------------------------------------------------------------- -->
-    <!-- The First Topic Section -->
-    <section class="topic">
-        <!-- the topic title a big bar with text in it -->
+<section class="topic">
         <div class="topic-title">
-            <h1>Computer science</h1>
+            <h1>Computer Science</h1>
         </div>
-        <!-- now a three column grid of images -->
         <div class="topic-content">
-            <!-- one "card" which includes an image with a text below it -->
-            <div class="topic-card">
-                <img src="images/hexdragon.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/hexdragon.png" alt="Hex Dragon Computer Science topic showcase">
                 <h2 class="topic-card-text">Hex Dragon</h2>
+                <p class="topic-card-description">A pixel art dragon colored using hexadecimal values to learn how computers represent RGB colors.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/{26D8C08B-5B61-411A-BBF7-5194639E8843}.png" alt="change this too!">
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/{26D8C08B-5B61-411A-BBF7-5194639E8843}.png" alt="Flippy Bit binary game screenshot">
                 <h2 class="topic-card-text">Flippybit</h2>
+                <p class="topic-card-description">A screenshot from Flippy Bit, a fast-paced game used to practice binary-to-decimal conversions on the fly.</p>
             </div>
-            <div class="topic-card">
-                <img src="images/{75AA2B68-959E-4D09-A3E7-016EF1CCC5D9}.png" alt="change this too!">
-                <h2 class="topic-card-text"></h2>
+            <div class="topic-card" onclick="toggleDescription(this)">
+                <img src="images/{75AA2B68-959E-4D09-A3E7-016EF1CCC5D9}.png" alt="Space photo placeholder">
+                <h2 class="topic-card-text">Deep Space</h2>
+                <p class="topic-card-description"> Just a random cool photo of space inserted purely for the aesthetics.</p>
             </div>
         </div>
     </section>
-    <!-- A Simple Website Footer ------------------------------------------------------------------------------ -->
+
     <footer class="footer">
         <p>&copy; 2025 My Showcase Website By Linuka Kandage</p>
     </footer>
 
-<!-- The end of the whole page- no more content after this! -->
+    <script>
+        function toggleDescription(card) {
+            card.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
